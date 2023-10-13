@@ -1,4 +1,4 @@
-- hosts: awsserver
+- hosts: awss
   become: true
   tasks:
   - name: Install git and docker
@@ -11,6 +11,6 @@
   - name: Start the docker service
     service: name=docker state=started
   - name: change the directory to /tmp/mycode and then  Build the dockerfile
-    command: chdir=/tmp/mycode docker build -t mycepimage01 .
+    command: chdir=/tmp/mycode docker build -t mycepimage03
   - name: Runt he Image to deploy app on the container
-    command: docker run -d -P mycepimage01
+    command: docker run -d -P mycepimage03
