@@ -7,7 +7,7 @@ stages{
 stage('Clone the playbook repo')
 {
    steps{
-   git branch: 'main', url: 'https://github.com/Sonal0409/CEP-Ansible-1.git'
+   git branch: 'main', url: 'https://github.com/kiranccase/config-project.git'
 
 }
 
