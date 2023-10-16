@@ -11,6 +11,6 @@
   - name: Start the docker service
     service: name=docker state=started
   - name: change the directory to /tmp/mycode and then  Build the dockerfile
-    command: chdir=/tmp/mycode docker build -t mycepimage06
+    command: chdir=/tmp/mycode docker build -t mycepimage12 .
   - name: Runt he Image to deploy app on the container
-    command: docker run -d -P mycepimage06
+    command: docker run -d -P mycepimage12
